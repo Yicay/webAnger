@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#000
+}
+#logo{
+	background-color:#000;
+}
+#dhl{
+	text-align:center;
+	background-color:#D52;
+	padding:6px 6px 6px 6px;			
+}
+.adhl{
+	font-size:24px;
+	color:#FFF;
+	padding: 3px;
+	margin-right:21px;
+	margin-left: 21px;	
+}
+p{
+font-size:18px;
+text-align:left;
+background-color:#111;
+}
+a{
+text-decoration:none;
+color:#FFF;
+}
+#p1{
+	background-color:#000;
+	text-align:center;		
+}
+#ph1{
+	background-color:#111;
+	color:#FFF;
+	font-size:43px;
+	}
+.ph2{
+	background-color:#000;
+	color:#00F;
+	font-size:30px;
+	text-align:center;	
+	}
+#beian{
+	text-align:center;
+	}
+#icp{
+	color:#FFF;
+}
