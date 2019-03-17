@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+code{font-size:18px}
+body{
+	}
+div{
+	margin:0 auto;
+	width:1200px;}
+	#sy{
+		font-size:32px;
+		text-decoration:none;
+		margin-left:16px;
+		margin-bottom:8px;
+		text-align:center;
+		color:#000;
+		
+		
+		}
+	  #sy1{
+background-image:url(../bg-button.png);
+  	  }
+
+</style>
+
+<link href="../CSS/prism.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+<div id="sy1" style="width:90px;height:36;">
+<a id="sy" href="../index.html" >首页</a>
+</div>
+<div>
+  <pre class="line-numbers" style="white-space:pre-wrap">
+<code class="language-cpp" >
+#define _CRT_SECURE_NO_WARNINGS
+#include&ltstdio.h&gt
+#include&ltstdlib.h&gt
+#include&ltmath.h&gt
+
+void A6();
+void A7();
+void A8();
+void A9();
+void A10();
+void A11();
+void A12();
+int Factorial(int);
+int NAA(int,int);
+void A13();
+void A14();
+void A15();
+void A16();
+void A17();
+
+int main()
+{	
+	//A6();
+	//A7();
+	//A8();
+	//A9();
+	//A10();
+	//A11();
+	//A12();
+	//A13();
+	//A14();
+	//A15();
+	A16();
+	A17();
+	system(&quotpause&quot);
+	return 0;
+}
+
+
+void A6()
+{
+	double i,prize;
+	printf(&quot输入当月利润：\n&quot);
+	scanf(&quot%lf&quot, &i);
+	if (i &lt 10) prize = i * 0.1;
+	else if (i &lt 20)prize = (i - 10)*0.075 + 1;
+	else if (i &lt 40)prize = (i - 20)*0.05 + 1.75;
+	else if (i &lt 60)prize = (i - 40)*0.03 + 2.75;
+	else if (i&lt100)prize = (i - 60)*0.015 + 3.35;
+	else prize = (i - 100)*0.01 + 3.75;
+	printf(&quot应发奖金%.4f万元\n&quot, prize);
+	return;
+
+}
+
+void A7()
+{
+	const int brick=36;
+	int a, b, c;	//a,b,c 分别为 男人，女人，小孩儿
+	int i, j, k;
+	for (i = 0; i &lt= brick/4.; i++) {
+		for (j = 0; j &lt= brick/3.; j++) {
+			for (k = 0; k &lt= brick*2; k++) {
+				if (4 * i + 3 * j + k * .5 == brick)printf(&quot男人：%d，女人：%d，小孩儿：%d\n&quot, i, j, k);
+			}
+		}
+	}
+}
+
+void A8()
+{
+	int i, j, k;
+	int a;
+	for (i = 0; i &lt 1000000; i++) {
+		for (j = 10; j &lt 1000; j++){
+			if (i + 100 == j * j) {
+				for (k = 16; k &lt 1000; k++) {
+					if (i + 268 == k * k)printf(&quot%d %d %d\n&quot,i,j*j,k*k);
+				}
+			}
+		}
+	}
+}
+
+void A9()
+{
+	char a[64];
+	int e = 0, s = 0, n = 0, o=0;
+	int i, j;
+	
+
+	printf(&quot输入一行字符（\&quothjo ig#$f *87';@#$4~^\&quot）：\n&quot);
+	gets(a);						//scanf遇到空格符会返回，gets 遇到回车符才会返回；
+	for (i = 0; i &lt 64; i++) {
+		if ((a[i] != '\0')) {
+			if ((a[i] &gt= 64 && a[i] &lt= 90) || (a[i] &gt= 96 && a[i] &lt= 122)) e++;
+			else if (a[i] == ' ')s++;
+			else if (a[i] &gt= 48 && a[i] &lt= 57)n++;
+			else o++;
+		}
+		else break;
+	}
+	printf(&quot输入了%d个字母，%d个数字，%d个空格，其他字符%d个。\n&quot,e,n,s,o);
+	return;
+}
+
+
+void A10()
+{
+	int i, j;
+	for (i = 1; i &lt= 9; i++) {
+		for (j = 1; j &lt= 9; j++) {
+			if(j&lt=i)printf(&quot%d*%d=%d\t&quot, i, j, i*j);
+		}
+		printf(&quot\n&quot);
+	}
+}
+void A11()
+{
+	double e = 1,e_1;
+	int n=1;
+	while (1){
+		e_1 = 1./Factorial(n);
+		if (e_1 &gt 10e-5)e += e_1;
+		else break;
+		n++;
+	}
+	printf(&quote的值：%f&quot, e);
+}
+
+int Factorial(int n)
+{
+	if (n == 1)return 1;
+	else return n * Factorial(n - 1);
+}
+
+
+void A12()
+{
+	int a,n,i;
+	int sum = 0;
+	printf(&quot输入a与n(a n):\n&quot);
+	scanf(&quot%d %d&quot,&a,&n);
+	for (i = 1; i &lt= n; i++)
+		sum += NAA(i, a);
+	printf(&quot和为%d\n&quot, sum);
+	return;
+}
+
+int NAA(int n, int a) {
+	int i;
+	int sum=0;
+	for (i = 0; i &lt n; i++) {
+		sum += (int)pow(10,i)*a;
+	}
+	return sum;
+}
+
+void A13()
+{
+	int i;
+	double product=1.;
+	for (i = 1; i &lt= 50; i++) {
+		product *= 2.*i / (2 * i - 1)*2.*i / (2 * i + 1);
+	}
+	printf(&quotpi=%f\n&quot, product*2);
+}
+
+void A14()
+{
+	int i, j, k;
+	for (i = 1; i &lt 1000; i++) {
+		for ( j = 1; j &lt 1000; j++)
+			if (j*i == i + j)printf(&quot%d*%d=%d+%d\n&quot, i, j, i, j);
+	}
+	for (i = 1; i &lt 1000; i++) {
+		for (j = 1; j &lt 1000; j++) {
+			for ( k = 0; k &lt 1000; k++)
+				if (j*i*k == i + k+j)printf(&quot%d*%d*%d=%d+%d+%d\n&quot, i, j,k, i, j,k);
+		}
+			
+	}
+}
+
+
+void A15()
+{
+	double h = 100;
+	double x = 0;
+	int n=0;
+	while (1)
+	{	
+		if (n == 10)break;
+		x += h;
+		h *= 0.5;
+		x += h;
+		n++;
+	}
+	printf(&quot第10次落地时共经过%fm，\n第10次反弹“%f米高.\n&quot, x - h, h);
+}
+
+void A16()
+{
+	int i, j,k;
+	//图（1）
+	for (i = 0; i &lt 8; i+=2) {
+		for ( j = 0; j &lt= i; j++)
+			putchar('*');	
+		putchar('\n');
+	}
+	//图（2）
+	putchar('\n');
+	for (i = 0; i &lt 8; i += 2) {
+		for (j = 6;j&gt=0;j--)
+			if (j&gti)putchar(' ');
+			else putchar('*');
+		putchar('\n');
+	}
+
+	//图（3）
+	printf(&quot图三\n&quot);
+	for ( i = 0; i &lt 4; i++)
+	{
+		for ( j = 3; j &gt 0; j--){
+			if (j&gti) 
+				putchar(' ');
+			else putchar('*');	
+		}
+		for (k = 0; k &lt 4; k++){
+			if (k &gt i)
+				putchar(' ');
+			else putchar('*');
+		}
+		putchar('\n');
+	}
+
+	//or
+	for (i = 0; i &lt 4; i++)
+	{
+		for (j = 1; j &lt= 7; j++)
+			if (abs(4 - j) &gt i)putchar(' ');
+			else putchar('*');
+		putchar('\n');
+	}
+	//图四
+	printf(&quot图四\n&quot);
+
+	for (i = 0; i &lt 8; i += 2) {
+		for (j = 0; j &lt= i; j++)
+			putchar('*');
+		putchar('\n');
+	}
+	for (i = 0; i &lt 6; i += 2) {
+		for (j = 5; j &gti; j--)
+			putchar('*');
+		putchar('\n');
+	}
+	//图五
+
+	printf(&quot图五\n&quot);
+	for (i = 0; i &lt 4; i++){
+		for (j = 1; j &lt= 7; j++)
+		if (abs(4 - j) &gt i)putchar(' ');
+		else putchar('*');
+	putchar('\n');	
+	}
+	for (i = 2; i &gt=0; i--) {
+		for (j = 1; j &lt= 7; j++)
+			if (abs(4 - j) &gt i)putchar(' ');
+			else putchar('*');
+		putchar('\n');
+	}
+	//图六
+	printf(&quot图六\n&quot);
+	for (i = 0; i &lt 4; i++) {
+		for (j = 1; j &lt= 7; j++)
+			if (abs(4 - j) &gt i)printf(&quot  &quot);
+			else printf(&quot*$&quot);
+		putchar('\n');
+	}
+	for (i = 2; i &gt= 0; i--) {
+		for (j = 1; j &lt= 7; j++)
+			if (abs(4 - j) &gt i)printf(&quot  &quot);
+			else printf(&quot*$&quot);
+		putchar('\n');
+	}
+}
+
+void A17()
+{
+	char G;
+	for (G = 'A'; G &lt= 'D'; ++G) 
+		if ((G != 'A') + (G == 'C') + (G == 'D') + (G != 'D') == 3)
+			printf(&quot%c是好人\n&quot, G);
+	return;
+}
+
+
+
+</code></pre>
+</div>
+<div align="center"><br />
+</div>
+<hr />
+<pre>&nbsp;</pre >
+
+<script src="../js/prism.js" type="text/javascript">
+  $('pre').addClass("line-numbers").css("white-space", "pre-wrap");
+</script>
+
+
+</body>
+</html>

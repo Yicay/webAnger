@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+code{font-size:18px}
+</style>
+
+
+</head>
+
+<body>
+<a href="../index.html"><h2>首页</h2></a>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+
+int main()
+{
+	const double PI = 3.1415926;
+	const double R = 1.5;
+	const int H = 3;
+	double c, s, v;
+	c = 2 * PI*R;
+	s = PI * R*R;
+	v = s * H;
+    
+    printf(&quot;底面周长：%.2f,底面面积：%.2f,体积：%.2f\n&quot;,c,s,v);
+    system(&quot;pause&quot;);
+	return 0;
+}
+
+</code></pre>
+
+
+<p>结果</p>
+<p><img src="../image/1-2-2a.GIF"  alt="运行结果截图"/></p>
+
+
+<pre><code>
+#define _CRT_SECURE_NO_WARNINGS
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+#define PI 3.1415926
+
+int main()
+{
+    double r, h;
+    double c, s, v;
+    
+    printf(&quot;输入（r h）：\n&quot;);
+    scanf(&quot;%lf %lf&quot;, &amp;r, &amp;h);
+    
+    c = 2 * PI*r;
+    s = c / 2 * r;
+    v = s * h; printf(&quot;底面周长：%.2f,底面面积：%.2f,体积：%.2f\n&quot;,c,s,v);
+    
+    system(&quot;pause&quot;);
+	return 0;
+}
+&nbsp;
+</code></pre>
+
+<p>结果</p>
+<p><img src="../image/1-2-2b.GIF"  alt="运行结果截图"/></p>
+
+
+<link href="../styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="../js/highlight.min.js"></script></script>
+<script >hljs.initHighlightingOnLoad();</script>    
+</body>
+</html>
